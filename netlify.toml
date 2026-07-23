@@ -1,0 +1,11 @@
+[build]
+  command = "cd backend && pnpm i"
+  publish = "backend/src"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/index"
+  status = 200
